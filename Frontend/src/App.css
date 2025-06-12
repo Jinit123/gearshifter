@@ -1,0 +1,399 @@
+html {
+    padding: 0px;
+}
+
+body {
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.backgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(60, 60, 69, 1) 18%, rgba(0, 0, 0, 1) 100%);
+}
+
+.serviceBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.HowToBookBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.FooterBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.OurPartnersBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.PriceListBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.ServicePageBackgroundColor {
+    /* background: #000000; */
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(110, 110, 110) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.BookingPageBackgroundColor {
+    /* background: #000000; */
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(51, 51, 51) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.LoginBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.AboutPageBackgroundColor {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(51, 51, 51, 1) 29%, rgba(0, 0, 0, 1) 100%);
+}
+
+.navbar {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0) 18%, rgba(0, 0, 0, 1) 100%);
+}
+
+.most-popular-badge {
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 12px;
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.most-popular-border {
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+}
+
+.durationBadge {
+    background-color: #ff0000 !important;
+    color: darkblue !important;
+}
+
+
+.image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.image {
+    position: relative;
+    z-index: 2;
+    margin-left: 160px !important;
+}
+
+.slogan {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    z-index: 0;
+    font-size: 80px;
+    opacity: 100%;
+    color: white;
+    background: linear-gradient(white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 400px) {
+    .image {
+        margin-left: 80px !important;
+        padding: 0px !important;
+        margin-top: 30px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slogan {
+        font-size: 40px;
+        top: 28px;
+        left: 24px;
+    }
+
+}
+
+
+
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(2555, 255, 255, 0.3);
+}
+
+.card-title {
+    color: whitesmoke;
+}
+
+.navbarContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Transparent black overlay */
+    z-index: -1;
+}
+
+.navbarContainer {
+    background-image: url("./assets/CarFinal.png") !important;
+    background-position: center;
+    background-size: cover;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.modal-content {
+    border-radius: 12px;
+    /* padding: 20px; */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border: 1px solid white;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+.modal-header,
+.modal-body {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.list-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+@media screen and (max-width: 400px){
+    .list-group{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .modal-body{
+        padding: 7px;
+    }
+    
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgb(0, 0, 0);
+}
+
+.list-group-item-action:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+}
+
+.list-group-item:hover .brand-logo {
+    transform: scale(1.1);
+}
+
+.list-group-item:hover .brandName {
+    transform: scale(1.1);
+}
+
+.brand-logo,
+.brandName {
+    transition: transform 0.6s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e2dfdf !important;
+    border-bottom: 2px solid black;
+    color: rgb(0, 0, 0) !important;
+}
+
+.city-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.modelSize {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 100;
+    padding: 5px 8px;
+    position: absolute;
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid !important;
+    top: 2px;
+    right: 5px;
+    z-index: 1000;
+}
+
+.durationBadge {
+    top: 20px;
+    background-color: #ff0000 !important;
+}
+
+.icon-gradient {
+    background: linear-gradient(to bottom, #7c7777, #e7e3e3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+thead th {
+    padding: 12px !important;
+    border: 1px solid;
+}
+
+tbody td {
+    border: 1px solid;
+    padding: 12px !important;
+}
+
+.partner-scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.partner-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.partner-logo {
+    flex: 0 0 auto;
+    padding: 0 2rem;
+}
+
+.partner-logo img {
+    max-height: 70px;
+    object-fit: contain;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.testimonial-scroll {
+    display: flex;
+    gap: 20px;
+    animation: scrollTestimonials 15s linear infinite;
+}
+
+@keyframes scrollTestimonials {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.logoImage {
+    padding: 5px;
+    border: 3px solid #334155;
+    border-radius: 10px;
+}
+
+.NotFoundText {
+    position: absolute;
+    top: 90px;
+    font-size: 200px;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    rotate: -3deg;
+}
+
+.NotFoundImage {
+    padding-top: 200px;
+    position: relative;
+    width: 50%;
+}
+
+.cardBG {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.bookingCardBg {
+    background-color: #b3b0b0;
+}
