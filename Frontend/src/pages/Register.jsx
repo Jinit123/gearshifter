@@ -41,7 +41,7 @@ const Register = () => {
                 </div>
                 <div className='col-12 col-md-12 col-lg-5'>
                     <form className="border p-5 rounded w-100" onSubmit={handleSubmit}>
-                        <h2 className="text-center mb-4 pb-4">Register To Gear Shifter</h2>
+                        <h2 className="text-center text-dark mb-4 pb-4">Register To Gear Shifter</h2>
                         <div className="mb-3">
                             <label htmlFor="email" className="form-label">Name</label>
                             <input type="text" className="form-control" id="email" placeholder="Enter name" onChange={(e) => setData({ ...data, name: e.target.value })} required />
