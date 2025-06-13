@@ -70,11 +70,9 @@ const App = () => {
 
         <Route path='/services' element={
           <ProtectedRoute>
-          <div>
             <ServicesPage />
             <Footer />
-          </div>
-         </ProtectedRoute>
+          </ProtectedRoute>
         } />
       </Routes>
     </Router>
