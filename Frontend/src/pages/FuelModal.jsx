@@ -2,7 +2,7 @@ import react from 'react'
 import '../App.css'
 import * as Icon from 'react-icons/fa'
 
-const FuelModal = ({ fuelTypes = [], setFormData, showModal, setShowModal }) => {
+const FuelModal = ({ fuelTypes = [], setFormData, loadingFuels, showModal, setShowModal }) => {
 
 
     return (
@@ -14,7 +14,11 @@ const FuelModal = ({ fuelTypes = [], setFormData, showModal, setShowModal }) => 
                         <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
                     </div>
                     <div className="modal-body">
-                        {fuelTypes.length > 0 ? (
+                        {loadingFuels ? (
+                            <div className="d-flex justify-content-center">
+                                <div className="loader"></div>
+                            </div>
+                        ) : (
                             <div className="list-group mt-4">
                                 {fuelTypes.map((fuel, index) => {
                                     const IconComponent = Icon[fuel.icon] || Icon.FaQuestion;
@@ -33,8 +37,6 @@ const FuelModal = ({ fuelTypes = [], setFormData, showModal, setShowModal }) => 
                                     );
                                 })}
                             </div>
-                        ) : (
-                            <p className="text-center text-muted">Loading fuel types...</p>
                         )}
                     </div>
                 </div>

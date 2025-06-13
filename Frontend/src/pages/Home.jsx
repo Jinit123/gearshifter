@@ -41,6 +41,9 @@ const Home = () => {
     fuelType: ""
   });
   const [loadingCities, setLoadingCities] = useState(false);
+  const [loadingBrands, setLoadingBrands] = useState(false);
+  const [loadingCarModels, setLoadingCarModels] = useState(false);
+  const [loadingFuels, setLoadingFuels] = useState(false);
 
 
 
@@ -201,18 +204,21 @@ const Home = () => {
               />
               <BrandModal
                 brands={brands}
+                loadingBrands={loadingBrands}
                 setFormData={setFormData}
                 showModal={showBrands}
                 setShowModal={setShowBrands}
               />
               <CarModal
                 models={models}
+                loadingCarModels={loadingCarModels}
                 setFormData={setFormData}
                 showModal={showCarModel}
                 setShowModal={setShowCarModel}
               />
               <FuelModal
                 fuelTypes={fuelTypes || []}
+                loadingFuels={loadingFuels}
                 setFormData={setFormData}
                 showModal={showFuelModal}
                 setShowModal={setShowFuelModel}
