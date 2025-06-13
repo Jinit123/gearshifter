@@ -40,6 +40,7 @@ const Home = () => {
     model: "",
     fuelType: ""
   });
+  const [loadingCities, setLoadingCities] = useState(false);
 
 
 
@@ -56,12 +57,14 @@ const Home = () => {
 
     console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
 
+    setLoadingCities(true);
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/cities`)
       .then(res => {
         console.log("Cities API Response:", res.data);
         setCities(res.data);
       })
-      .catch(err => console.log("Error fetching cities:", err));
+      .catch(err => console.log("Error fetching cities:", err))
+      .finally(()=> setLoadingCities(false));
   }, []);
 
   useEffect(() => {
@@ -177,6 +180,7 @@ const Home = () => {
               </div>
               <CityModal
                 cities={cities}
+                loadingCities={loadingCities}
                 setFormData={setFormData}
                 showModal={showModal}
                 setShowModal={setShowModal}
