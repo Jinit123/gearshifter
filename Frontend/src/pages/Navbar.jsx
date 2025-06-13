@@ -11,7 +11,9 @@ const Navbar = ({ cartCount }) => {
     const handleLogout = async () => {
         try {
             const token = localStorage.getItem("token");
-            await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/logout`, {
+            console.log("Logout Token", token );
+            
+            await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/logout`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -81,7 +83,7 @@ const Navbar = ({ cartCount }) => {
                                         <a className='nav-link text-white'><FaUser />{username}</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white" onClick={handleLogout} href=''>Logout</a>
+                                        <a className="nav-link text-white" onClick={handleLogout}>Logout</a>
                                     </li>
                                 </div>
                             )}
