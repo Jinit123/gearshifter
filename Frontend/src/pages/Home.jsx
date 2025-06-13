@@ -53,6 +53,9 @@ const Home = () => {
   }, [formData.fuelTypes]);
 
   useEffect(() => {
+
+    console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
+
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/cities`)
       .then(res => {
         console.log("Cities API Response:", res.data);
