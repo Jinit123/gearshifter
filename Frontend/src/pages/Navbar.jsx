@@ -56,13 +56,13 @@ const Navbar = ({ cartCount }) => {
                     <div className="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul className="navbar-nav me-auto mb-2 mb-sm-0 d-flex gap-3">
                             <li className="nav-item">
-                                <Link className="nav-link text-white" href="/">Home</Link>
+                                <Link className="nav-link text-white" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" href="/services">Services</Link>
+                                <Link className="nav-link text-white" to="/services">Services</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-white" href="/about">About</Link>
+                                <Link className="nav-link text-white" to="/about">About</Link>
                             </li>
                         </ul>
 
@@ -71,10 +71,10 @@ const Navbar = ({ cartCount }) => {
                             {!isLoggedIn ? (
                                 <>
                                     <li className="nav-item">
-                                        <Link className="nav-link text-white" href="/login">Login</Link>
+                                        <Link className="nav-link text-white" to="/login">Login</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link text-white" href="/register">Register</Link>
+                                        <Link className="nav-link text-white" to="/register">Register</Link>
                                     </li>
                                 </>
                             ) : (
