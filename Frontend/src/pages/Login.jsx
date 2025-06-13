@@ -64,7 +64,7 @@ const Login = () => {
                 <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => setData({ ...data, password: e.target.value })} required />
               </div>
               <button type="submit" className="btn text-white w-100 bg-danger">Login Now</button>
-              <p className='text-center'>New User? <Link to="/register">Register</Link></p>
+              <p className='text-center text-dark'>New User? <Link to="/register">Register</Link></p>
             </form>
           </div>
           <div className='col-12 col-lg-4'>
