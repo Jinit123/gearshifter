@@ -14,7 +14,6 @@ import CityModal from './CityModal';
 import BrandModal from './BrandModal';
 import CarModal from './CarModel';
 import FuelModal from './FuelModal';
-import Harrier from '../assets/Harrier.png'
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -50,22 +49,22 @@ const Home = () => {
 
 
   useEffect(() => {
-    console.log("Debug: formData =", formData);
+    // console.log("Debug: formData =", formData);
   }, [formData]);
 
   useEffect(() => {
-    console.log("Debug: formData.fuelTypes =", formData.fuelTypes);
+    // console.log("Debug: formData.fuelTypes =", formData.fuelTypes);
   }, [formData.fuelTypes]);
 
   useEffect(() => {
 
-    console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
+    // console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
 
     setLoadingCities(true);
     const startTime = Date.now();
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/cities`)
       .then(res => {
-        console.log("Cities API Response:", res.data);
+        // console.log("Cities API Response:", res.data);
         setCities(res.data);
       })
       .catch(err => console.log("Error fetching cities:", err))
@@ -89,7 +88,7 @@ const Home = () => {
     if (formData.city) {
       axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/brands`)
         .then(res => {
-          console.log("Brands API Response:", res.data);
+          // console.log("Brands API Response:", res.data);
           setBrands(res.data);
         })
         .catch(err => console.log("Error fetching brands", err));
@@ -98,7 +97,7 @@ const Home = () => {
 
   useEffect(() => {
     if (formData.brand && formData.brand._id) {
-      console.log("Brand Selected:", formData.brand._id);
+      // console.log("Brand Selected:", formData.brand._id);
       axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/models?brand=${formData.brand._id}`)
         .then(res => setModels(res.data))
         .catch(err => console.log("Error fetching models:", err))
@@ -107,21 +106,21 @@ const Home = () => {
 
   useEffect(() => {
     if (formData.model && formData.model._id) {
-      console.log("Fetching Fuel Types for Model:", formData.model._id);
+      // console.log("Fetching Fuel Types for Model:", formData.model._id);
       axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/fuel?model=${formData.model._id}`)
         .then(res => {
-          console.log("Fuel Types API Response:", res.data);
+          // console.log("Fuel Types API Response:", res.data);
           setFuelTypes(res.data.fuelTypes || res.data);
         })
         .catch(err => console.error("Error fetching fuel types:", err));
     } else {
-      console.log("Model ID is missing or undefined!");
+      // console.log("Model ID is missing or undefined!");
     }
   }, [formData.model]);
 
   const handleCheckPrice = () => {
     if (formData.brand && formData.model && formData.fuelTypes) {
-      console.log("Navigating with Image:", `/uploads/logos/${formData.model.imageUrl}.png`);
+      // console.log("Navigating with Image:", `/uploads/logos/${formData.model.imageUrl}.png`);
 
       localStorage.setItem("cart", JSON.stringify({ services: [] }));
       window.dispatchEvent(new Event("storage"));
@@ -137,7 +136,7 @@ const Home = () => {
         }
       });
     } else {
-      console.log("Missing required selections");
+      // console.log("Missing required selections");
     }
   };
 
@@ -145,7 +144,7 @@ const Home = () => {
     <div className='container-fluid backgroundColor'>
       <div className='row'>
         <div className='col-12 col-lg-8 g-0 image-container position-relative'>
-          <img src={Harrier} alt="" className='img-fluid w-75 mb-5 pb-5 image' />
+          <img src={Model} alt="" className='img-fluid w-75 mb-5 pb-5 image' />
           <h2 className='position-absolute slogan'>Restore <br />Revive <br /> Ride</h2>
         </div>
         <div className='col-12 col-lg-4 g-0'>
