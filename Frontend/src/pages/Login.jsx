@@ -14,11 +14,14 @@ const Login = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [user, setUser] = useState(null);
-  const naviagte = useNavigate()
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
 
     e.preventDefault();
+
+    console.log("Login Backend URL:", import.meta.env.VITE_BACKEND_URL);
+    
     try {
       const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, data);
       localStorage.setItem("token", res.data.token);
@@ -29,7 +32,7 @@ const Login = () => {
 
       setShowModal(true);
       setTimeout(() => {
-        naviagte('/');
+        navigate('/');
       }, 2000);
     } catch (err) {
       alert(err.response.data.msg)
