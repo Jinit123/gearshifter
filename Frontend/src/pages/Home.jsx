@@ -67,7 +67,7 @@ const Home = () => {
       .catch(err => console.log("Error fetching cities:", err))
       // .finally(()=> setLoadingCities(false));
       .finally(() => {
-        const endTime = endTime - startTime;
+        const endTime = Date.now();
         const elapsedTime = endTime - startTime;
 
         const minLoaderTime = 1000;
