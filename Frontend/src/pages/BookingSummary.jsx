@@ -96,7 +96,7 @@ const BookingSummary = () => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body text-center">
-                            <img src="http://localhost:5000/uploads/logos/GP.png" alt="UPI QR Code" className="img-fluid" />
+                            <img src="https://gearshifter-backend.vercel.app/uploads/logos/GP.png" alt="UPI QR Code" className="img-fluid" />
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
