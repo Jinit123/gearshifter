@@ -14,6 +14,7 @@ import CityModal from './CityModal';
 import BrandModal from './BrandModal';
 import CarModal from './CarModel';
 import FuelModal from './FuelModal';
+import Harrier from '../assets/Harrier.png'
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -144,7 +145,7 @@ const Home = () => {
     <div className='container-fluid backgroundColor'>
       <div className='row'>
         <div className='col-12 col-lg-8 g-0 image-container position-relative'>
-          <img src={Model} alt="" className='img-fluid w-75 mb-5 pb-5 image' />
+          <img src={Harrier} alt="" className='img-fluid w-75 mb-5 pb-5 image' />
           <h2 className='position-absolute slogan'>Restore <br />Revive <br /> Ride</h2>
         </div>
         <div className='col-12 col-lg-4 g-0'>
