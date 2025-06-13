@@ -58,13 +58,27 @@ const Home = () => {
     console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
 
     setLoadingCities(true);
+    const startTime = Date.now();
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/cities`)
       .then(res => {
         console.log("Cities API Response:", res.data);
         setCities(res.data);
       })
       .catch(err => console.log("Error fetching cities:", err))
-      .finally(()=> setLoadingCities(false));
+      // .finally(()=> setLoadingCities(false));
+      .finally(() => {
+        const endTime = endTime - startTime;
+        const elapsedTime = endTime - startTime;
+
+        const minLoaderTime = 1000;
+        const remainingTime = minLoaderTime - elapsedTime;
+
+        if (remainingTime > 0) {
+          setTimeout(() => setLoadingCities(false), remainingTime)
+        } else {
+          setLoadingCities(false);
+        }
+      })
   }, []);
 
   useEffect(() => {
