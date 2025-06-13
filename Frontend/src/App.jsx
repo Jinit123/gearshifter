@@ -69,12 +69,12 @@ const App = () => {
         } />
 
         <Route path='/services' element={
-          // <ProtectedRoute>
+          <ProtectedRoute>
           <div>
             <ServicesPage />
             <Footer />
           </div>
-          // </ProtectedRoute>
+         </ProtectedRoute>
         } />
       </Routes>
     </Router>
