@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaCar, FaShoppingCart, FaTools, FaUser } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = ({ cartCount }) => {
     const navigate = useNavigate();
@@ -56,13 +56,13 @@ const Navbar = ({ cartCount }) => {
                     <div className="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul className="navbar-nav me-auto mb-2 mb-sm-0 d-flex gap-3">
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="/">Home</a>
+                                <Link className="nav-link text-white" href="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="/services">Services</a>
+                                <Link className="nav-link text-white" href="/services">Services</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="/about">About</a>
+                                <Link className="nav-link text-white" href="/about">About</Link>
                             </li>
                         </ul>
 
@@ -71,19 +71,19 @@ const Navbar = ({ cartCount }) => {
                             {!isLoggedIn ? (
                                 <>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white" href="/login">Login</a>
+                                        <Link className="nav-link text-white" href="/login">Login</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white" href="/register">Register</a>
+                                        <Link className="nav-link text-white" href="/register">Register</Link>
                                     </li>
                                 </>
                             ) : (
                                 <div className='d-flex'>
                                     <li className='nav-item'>
-                                        <a className='nav-link text-white'><FaUser />{username}</a>
+                                        <Link className='nav-link text-white'><FaUser />{username}</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white" onClick={handleLogout}>Logout</a>
+                                        <Link className="nav-link text-white" onClick={handleLogout}>Logout</Link>
                                     </li>
                                 </div>
                             )}
