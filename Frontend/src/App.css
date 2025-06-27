@@ -122,17 +122,17 @@ body {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 540px) {
     .image {
-        margin-left: 40px !important;
+        margin-left: 68px !important;
         padding: 0px !important;
         margin-top: 30px !important;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 540px) {
     .slogan {
-        font-size: 26px;
+        font-size: 37px;
         top: 28px;
         left: 24px;
     }
