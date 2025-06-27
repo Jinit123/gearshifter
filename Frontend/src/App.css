@@ -97,21 +97,22 @@ body {
 
 .image-container {
     position: relative;
+    margin-top: 30px;
     z-index: 1;
 }
 
 .image {
     position: relative;
     z-index: 2;
-    margin-left: 160px !important;
+    margin-left: 100px !important;
 }
 
 .slogan {
     position: absolute;
-    top: 70px;
-    left: 100px;
+    top: 4px;
+    left: 41px;
     z-index: 0;
-    font-size: 80px;
+    font-size: 41px;
     opacity: 100%;
     color: white;
     background: linear-gradient(white);
