@@ -210,7 +210,7 @@ body {
     gap: 30px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 540px) {
     .list-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
