@@ -1,3 +1,5 @@
 gear-shifter.services.json
-node_modules
-READDME.md
+node_modules/
+README.md
+Backend/.env
+Frontend/.env

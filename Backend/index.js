@@ -6,6 +6,7 @@ require('dotenv').config()
 const authRoutes = require('./routes/authRoutes')
 const adminRoutes = require('./routes/adminRoutes')
 const cartRoutes = require("./routes/cartRoutes");
+// const dns = require("dns");
 
 const app = express();
 app.use(express.json());
@@ -19,7 +20,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'Public/uploads')));
 app.use('/logos', express.static(path.join(__dirname, 'Public/uploads/logos')))
 
 
-
+// dns.setServers(["1.1.1.1", "8.8.8.8"])
 
 const PORT = process.env.PORT;
 
