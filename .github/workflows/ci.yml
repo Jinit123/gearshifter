@@ -1,0 +1,59 @@
+name: Gear Shifter CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  backend:
+    name: Backend CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with: 
+          node-version: 22
+          cache: npm
+          cache-dependency-path: Backend/package-lock.json
+
+      - name: Install backend dependencies
+        working-directory: Backend
+        run: npm CI
+
+      - name: Check backend
+        working-directory: Backend
+        run: npm ci 
+
+  frontend:
+    name: Frontend CI
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v7
+      with: 
+        node-version: 22
+        cache: npm
+        cache-dependency-path: Frontend/package-lock.json
+
+    - name: Install frontend dependencies
+      working-directory: Frontend
+      run: npm ci
+
+    - name: Build frontend
+      working-directory: Frontend
+      env:
+        VITE_BACKEND_URL: http://localhost:5000
+      run: npm run build
