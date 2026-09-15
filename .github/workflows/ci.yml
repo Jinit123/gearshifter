@@ -103,3 +103,15 @@ jobs:
       - name: Trigger Render backend deployment
         run: | 
           curl -X POST "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
+
+  deploy-backend: 
+    name: Deploy Frontend
+    runs-on: ubuntu-latest
+
+    needs: 
+      - docker
+
+    steps:
+     - name: Trigger Render frontend deployment
+       run: |
+          curl -X POST "${{secrets.RENDER_FRONTEND_DEPLOY_HOOK}}"
