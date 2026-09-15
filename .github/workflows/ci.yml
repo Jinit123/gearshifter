@@ -104,7 +104,7 @@ jobs:
         run: | 
           curl -X POST "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
 
-  deploy-backend: 
+  deploy-frontend: 
     name: Deploy Frontend
     runs-on: ubuntu-latest
 
