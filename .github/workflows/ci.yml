@@ -31,7 +31,7 @@ jobs:
 
       - name: Check backend
         working-directory: Backend
-        run: npm ci 
+        run: node --check index.js
 
   frontend:
     name: Frontend CI
@@ -91,3 +91,15 @@ jobs:
           tags: jinitmewada/gear-shifter-frontend:latest
           build-args: |
             VITE_BACKEND_URL=https://gear-shifter-backend.onrender.com     
+
+  deploy-backend: 
+    name: Deploy Backend
+    runs-on: ubuntu-latest
+
+    needs: 
+      - docker
+
+    steps: 
+      - name: Trigger Render backend deployment
+        run: | 
+          curl -X POST "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}"
