@@ -149,7 +149,7 @@ const Home = () => {
         </div>
         <div className='col-12 col-lg-4 g-0'>
           <form className=" rounded p-5 w-100 h-100" onSubmit={(e) => e.preventDefault()}>
-            <h2 className="text-center mb-4 pb-4">Experience The Best Car Services in <span className='fw-bold'>{formData.city || "Your City"}</span></h2>
+            <h2 className="text-center mb-4 pb-4">Experience The Best Car Services in <span className='fw-bold'>{formData.city || "Your Town"}</span></h2>
             <div className="mb-3">
               {/* <label className='form-label'>Select City:</label> */}
               <button type='button' className='btn btn-muted border border-white w-100' style={{ height: '50px' }} onClick={() => setShowModal(true)}>
